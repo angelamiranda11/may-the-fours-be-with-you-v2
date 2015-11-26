@@ -71,8 +71,8 @@ font-size: 1.8em;
 		<div class="container">
 			<div class="row">
 				<div class="jumbotron">
-				<h3>Wrong input</h3>
-				<a>Please try again.</a> 
+				<h3>GAME OVER!</h3>
+				<a>Word doesn't exist.</a> 
 				<!-- Paano toh? -->
 				<!-- <h3>List of other possible words:</h3> -->
 		</div>
