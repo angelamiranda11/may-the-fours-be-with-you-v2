@@ -45,7 +45,7 @@ public class CheckingServlet extends HttpServlet {
 			getServletContext().getRequestDispatcher("/during.html").forward(request, response);
 		}
 		else {
-			getServletContext().getRequestDispatcher("/times-up.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
 		}
 				
 				
