@@ -72,7 +72,7 @@ font-size: 1.8em;
 			<div class="row">
 				<div class="jumbotron">
 				<h3>Time's Up!</h3>
-				<a>Time Limit is 60 seconds only</a> 
+				<a>Time Limit is 60 seconds only.</a> 
 				<!-- Paano toh? -->
 				<h3>List of other possible words:</h3>
 		</div>
