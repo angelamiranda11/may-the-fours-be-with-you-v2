@@ -101,7 +101,7 @@ background-color:#CCCCCC;
 text-transform: uppercase;
 }
 .btn{
-   font-size:1.5em;
+   font-size:1em;
 }
 </style>
 <script type="text/javascript">
@@ -190,12 +190,11 @@ text-transform: uppercase;
 		//for quitting the game
 		 function quitGame ( )
 		{
-		 
-		 
-		    document.getElementById("button1").value = "End Game";
+	    document.getElementById("button1").value = "End Game";
 		    clearTimeout (Time);
 		 
 		}
+	
 </script>
 </head>
 <body>
@@ -234,7 +233,7 @@ text-transform: uppercase;
 					<br>
 					<input type="text" class="form-control" name="answer" required="required"/>
 					<br>
-					<input type="submit" value="Submit" class="btn btn-primary btn-block" id="form-button" name="submitb"/><br>
+					<input type="submit" value="Submit" onclick ="waitGame()" class="btn btn-primary btn-block" id="form-button" name="submitb"/><br>
 				</form>
 				</div>	
 				 
