@@ -2,6 +2,9 @@
 	pageEncoding="ISO-8859-1"%>
 
 
+<%@ page import = "game.before.wordsBean" %>
+<%! wordsBean bean = new wordsBean(); %>
+				
 <%@ page session="false" %>
     <jsp:useBean id="bean" type="game.before.wordsBean" scope="request" /> 
 
@@ -209,7 +212,7 @@ text-transform: uppercase;
 		</div>
 	</div>
 
-	<a><span class="glyphicon glyphicon-thumbs-up"></span> Score :</a>
+	<a><span class="glyphicon glyphicon-thumbs-up"></span> Score : <%out.print(wordsBean.score);%></a>
 	<br>
 	<br>
 	<div class="container">
@@ -217,8 +220,6 @@ text-transform: uppercase;
 			<div class="jumbotron container-fluid">
 				<div class="letters">
 				
-				<%@ page import = "game.before.wordsBean" %>
-				<%! wordsBean bean = new wordsBean(); %>
 				
 				<!-- <a id="demo">_</a><a id="demo1">_</a><a id="demo2">_</a><a id="demo3">_</a> -->
 				<div class="dummy">
@@ -227,8 +228,6 @@ text-transform: uppercase;
 				 <input type="text" size="1" name="button2" value="${bean.b}" readonly class="one"> 
 				<input type="text" size="1" name="button3" value="${bean.c}" readonly class="one"> 
 				<input type="text" size="1" name="button4" value="${bean.d}" readonly class="one">
-				
-				<!-- <input type="text" size="1" name="button5" value="${bean.words}" readonly class="form-control">  -->  
 					<br>
 					<br>
 					<input type="text" class="form-control" name="answer" required="required"/>

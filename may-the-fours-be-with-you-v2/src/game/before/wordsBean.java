@@ -12,7 +12,7 @@ public class wordsBean {
 	public static int score;
 
 	
-	public static int getScore() {
+	public int getScore() {
 		return score;
 	}
 	public static void setScore(int score) {

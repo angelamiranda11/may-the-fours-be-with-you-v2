@@ -28,7 +28,10 @@ public class CheckingServlet extends HttpServlet {
 		String b = request.getParameter("button2");
 		String c = request.getParameter("button3");
 		String d = request.getParameter("button4");
-		String[] arrayWord = wordsBean.words; //SEARCH HOW TO GET STRING[] IN SERVLET FROM BEAN
+		String[] arrayWord = wordsBean.words; 
+		
+		int score = wordsBean.score;
+		
 		System.out.println("User's answer: " + answer);		
 		System.out.println("FROM CHECKING SERVLET #2: " + a + b + c + d);
 		
@@ -42,6 +45,8 @@ public class CheckingServlet extends HttpServlet {
 		}
 	
 		if(flag==true){
+			score++;
+			wordsBean.setScore(score);
 			getServletContext().getRequestDispatcher("/during.html").forward(request, response);
 		}
 		else {

@@ -76,6 +76,8 @@ public class InitializeGameServlet extends HttpServlet {
 		for(int i=0; i < 4; i++){
 			System.out.println(splitLetter[i]);
 		}
+		
+		wordsBean.setScore(0);
 		bean.setWords(randomLine);
 		bean.setA(splitLetter[0]);
 		bean.setB(splitLetter[1]);

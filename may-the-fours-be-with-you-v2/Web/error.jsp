@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+   
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,15 +67,25 @@ font-size: 1.8em;
 </style>
 </head>
 <body>
+		<%@ page import = "game.before.wordsBean" %>
+		<%! wordsBean bean = new wordsBean(); %>
 			<br>
 			<br>
 		<div class="container">
 			<div class="row">
 				<div class="jumbotron">
+				<h3>SCORE</h3>
+				<h1><%out.println(wordsBean.score); %></h1>
+				<br>
 				<h3>GAME OVER!</h3>
 				<a>Word doesn't exist.</a> 
-				<!-- Paano toh? -->
-				<!-- <h3>List of other possible words:</h3> -->
+				<h3>List of other possible words:</h3>
+				<%
+					String[] listWordsArray = wordsBean.words;
+					for(int i=1; i<listWordsArray.length; i++){
+						out.println(listWordsArray[i]);
+					}
+				%>
 		</div>
 		<form action="index.jsp" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 		<br><input type="submit" value="Go Back to Menu" class="btn btn-primary btn-block"
