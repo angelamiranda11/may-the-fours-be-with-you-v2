@@ -93,6 +93,7 @@ footer h3 span {
 	cursor: default;
 }
 
+
 .one {
 	width: 80px;
 	height: 80px;
@@ -103,6 +104,16 @@ footer h3 span {
 	font-family: 'Star Jedi Outline';
 	background-color: #CCCCCC;
 	margin: 0.1em;
+
+.one{
+height:80px;
+font-size:45pt;
+text-align:center;
+display:inline;
+text-transform: uppercase;
+font-family: 'Star Jedi Outline';
+background-color:#CCCCCC;
+
 }
 
 .dummy.uppercase {
@@ -206,7 +217,14 @@ footer h3 span {
 </script>
 </head>
 <body>
+
 	<br>
+
+	<audio autoplay="autoplay" loop="loop" >
+	  <source src="./sounds/star-wars-cantina-song.mp3" type="audio/mpeg">
+	</audio>
+<br>
+
 	<div class="jumbotron1">
 		<a>Time Limit:</a> <br>
 		<div id="timer">

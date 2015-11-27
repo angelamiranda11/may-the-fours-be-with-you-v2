@@ -45,6 +45,9 @@ footer h3 span {
 </style>
 </head>
 <body>
+	<audio autoplay="autoplay" loop="loop" >
+	  <source src="./sounds/star-wars-theme-song.mp3" type="audio/mpeg">
+	</audio>
 	<!-- Kayo na bahala sa design :) -->
 
 	<div class="container">

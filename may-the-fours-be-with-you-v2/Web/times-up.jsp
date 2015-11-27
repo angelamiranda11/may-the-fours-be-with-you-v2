@@ -27,8 +27,11 @@ header a{
 	font-size: 1.8em;
 	
 }
+.row h1{
+font-color:red;
+}
 h1,h2{
-color:#FFFFFF;
+color:red;
 }
 footer {
 	text-align: center;
@@ -76,8 +79,12 @@ font-size: 1.8em;
 		<div class="container">
 			<div class="row">
 				<div class="jumbotron">
+
 				<h3 style="color:red">SCORE</h3>
-				<h1><%out.println(wordsBean.score); %></h1>
+
+				<h3>SCORE</h3>
+				<h1 style="font-color:red"><%out.println(wordsBean.score); %></h1>
+
 				<br>
 				<h3>Time's Up!</h3>
 				<a>Time Limit is 60 seconds only.</a> 
