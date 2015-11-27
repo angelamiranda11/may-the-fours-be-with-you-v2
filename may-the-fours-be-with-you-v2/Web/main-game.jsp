@@ -95,7 +95,7 @@ cursor:default;
 height:80px;
 font-size:45pt;
 text-align:center;
-display:in-line;
+display:inline;
 text-transform: uppercase;
 font-family: 'Star Jedi Outline';
 background-color:#CCCCCC;
