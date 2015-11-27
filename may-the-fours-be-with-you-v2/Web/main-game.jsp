@@ -208,7 +208,7 @@ background-color:#CCCCCC;
 		return (Time < 10) ? "0" + Time : +Time;
 
 	}
-	//for quitting the game
+	//comment: for quitting the game 
 	function quitGame() {
 		document.getElementById("button1").value = "End Game";
 		clearTimeout(Time);
