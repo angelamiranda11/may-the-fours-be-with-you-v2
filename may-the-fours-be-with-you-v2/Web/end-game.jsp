@@ -78,6 +78,13 @@ font-size: 1.8em;
 				<div class="jumbotron">
 				<h3>SCORE</h3>
 				<h1 style="color:red"><%out.println(wordsBean.score); %></h1>
+				<% if (wordsBean.score==0 || wordsBean.score==1) { %>
+				<img src="images/r2d2.png" height=150 width=200 align="right" />
+				<% } else if ( wordsBean.score==2 || wordsBean.score==3)  { %> 
+				<img src="images/yoda.png" height=150 width=200 align="right" />
+				<% } else if ( wordsBean.score==4 || wordsBean.score==5)  { %>
+				<img src="images/darth.png" height=150 width=200 align="right" />
+				<% }%>
 				<br>
 				<h3>Game Over</h3>
 				<a>Mission Aborted.</a> 
