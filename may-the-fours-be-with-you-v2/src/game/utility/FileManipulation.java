@@ -72,7 +72,7 @@ public class FileManipulation {
 			HashSet<String> dWordListNoDuplicates = new HashSet<>();
 
 			long startTime = System.currentTimeMillis();
-
+			
 			while (dFile.ready()) {
 				String word = dFile.readLine();
 				dWordList.add(word);
@@ -100,8 +100,9 @@ public class FileManipulation {
 
 			for (int i = 0; i < jWordList.size(); i++) {
 				String jWord = jArray[i];
-				count++;
+				
 				out.write(jWordList.get(i) + ",");
+				
 				for (int c = 0; c < dWordList.size(); c++) {
 					String dWord = dArray[c];
 					if (jWord.equals(dWord)) {
