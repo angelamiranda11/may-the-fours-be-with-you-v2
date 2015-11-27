@@ -201,6 +201,9 @@ text-transform: uppercase;
 </script>
 </head>
 <body>
+	<audio autoplay="autoplay" loop="loop" >
+	  <source src="./sounds/star-wars-cantina-song.mp3" type="audio/mpeg">
+	</audio>
 <br>
 	<div class="jumbotron1">
 		<a>Time Limit:</a>
