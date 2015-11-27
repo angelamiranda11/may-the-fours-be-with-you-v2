@@ -29,10 +29,10 @@ public class InitializeGameServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		wordsBean bean = new wordsBean();
 		
-		String source = "C://dictionary.txt";
-		String dest = "C://fourletters.txt";
-		String four = "C://arrangedfourletters.txt";
-		String csv = "C://fourletterscsv.csv";
+		String source = "D://dictionary.txt";
+		String dest = "D://fourletters.txt";
+		String four = "D://arrangedfourletters.txt";
+		String csv = "D://fourletterscsv.csv";
 
 		FileManipulation.prepareGameFile(dest);
 		FileManipulation.prepareGameFile(four);

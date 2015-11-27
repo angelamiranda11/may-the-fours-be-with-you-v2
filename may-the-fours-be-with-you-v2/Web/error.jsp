@@ -30,9 +30,11 @@ header a{
 }
 h1,h2{
 color:#FFFFFF;
+
+padding right: 50px;
 }
 footer {
-	text-align: center;
+	text-align: left;
 }
 
 footer h2 {
@@ -51,22 +53,24 @@ footer h3 span {
 }
 .letters a{
 display:in-line:block;
-text-align:in-line;
+text-align:left;
 font-size: 5em;
 }
 .container{
-text-align:center;
+text-align:in-line;
 }
 .container a{
 text-align:center;
 display:in-line:block;
-text-align:in-line;
+text-align:left;
 font-size: 1.8em;
 }
 .jumbotron {
-	width: 30em;
+	width: 50em;
 	margin: auto;
 }
+
+
 </style>
 </head>
 <body>
@@ -74,11 +78,14 @@ font-size: 1.8em;
 		<%! wordsBean bean = new wordsBean(); %>
 			<br>
 			<br>
+			
 		<div class="container">
 			<div class="row">
+			
 				<div class="jumbotron">
 				<h3>SCORE</h3>
 				<h1 style="color:red"><%out.println(wordsBean.score); %></h1>
+				<img src="images/r2d2.png" height=150 width=200 align="right" />
 				<br>
 				<h3>GAME OVER!</h3>
 				<a>Word doesn't exist.</a> 

@@ -25,7 +25,7 @@ public class DuringGameServlet extends HttpServlet {
 		RequestDispatcher rd;
 		
 		
-		String csv = "C://fourletterscsv.csv";
+		String csv = "D://fourletterscsv.csv";
 		
 		String[] randomLine = FileManipulation.randomLine(csv);
 		
