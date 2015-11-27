@@ -264,7 +264,7 @@ background-color:#CCCCCC;
 							</div> 
 							<input autofocus="autofocus" size="4" type="text"
 								class="form-control" name="answer" required="required"
-								id="answer" /> <br> <input type="submit" value="Guess"
+								id="answer" maxlength="4"/> <br> <input type="submit" value="Guess"
 								onclick="waitGame()" class="btn btn-primary btn-block"
 								id="form-button" name="submitb" /><br>
 						</form>
