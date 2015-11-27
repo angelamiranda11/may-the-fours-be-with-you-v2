@@ -2,11 +2,11 @@
 	pageEncoding="ISO-8859-1"%>
 
 
-<%@ page import = "game.before.wordsBean" %>
-<%! wordsBean bean = new wordsBean(); %>
-				
-<%@ page session="false" %>
-    <jsp:useBean id="bean" type="game.before.wordsBean" scope="request" /> 
+<%@ page import="game.before.wordsBean"%>
+<%!wordsBean bean = new wordsBean();%>
+
+<%@ page session="false"%>
+<jsp:useBean id="bean" type="game.before.wordsBean" scope="request" />
 
 <!DOCTYPE html>
 <html>
@@ -78,7 +78,7 @@ footer h3 span {
 	color: #FFFFFF;
 	display: in-line:block;
 	text-align: in-line;
-	font-size: 2em;
+	font-size: 3em;
 }
 
 .jumbotron1 {
@@ -88,33 +88,48 @@ footer h3 span {
 	text-shadow: black 0.3em 0.3em 0.3em;
 	background: transparent;
 }
-.dummy{
-cursor:default;
+
+.dummy {
+	cursor: default;
 }
-.one{
-height:80px;
-font-size:45pt;
-text-align:center;
-display:in-line;
-text-transform: uppercase;
-font-family: 'Star Jedi Outline';
-background-color:#CCCCCC;
+
+.one {
+	width: 80px;
+	height: 80px;
+	font-size: 35pt;
+	text-align: center;
+	display: inline;
+	text-transform: uppercase;
+	font-family: 'Star Jedi Outline';
+	background-color: #CCCCCC;
+	margin: 0.1em;
 }
-.dummy.uppercase{
-text-transform: uppercase;
+
+.dummy.uppercase {
+	text-transform: uppercase;
 }
-.btn{
-   font-size:1em;
+
+#answer {
+	font-size: 2em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.btn {
+	font-size: 1em;
+	display: inline;
+}
+.jumbotron {
+	width: 60em;
+	margin: auto;
 }
 </style>
 <script type="text/javascript">
-
-//for the buttons
+	//for the buttons
 	function myFunction() {
-		
-		
-	document.getElementById("demo").innerHTML = "${bean.getA()}";
-	document.getElementById("demo").disabled = false;
+
+		document.getElementById("demo").innerHTML = "${bean.getA()}";
+		document.getElementById("demo").disabled = false;
 
 	}
 	function myFunction1() {
@@ -126,85 +141,74 @@ text-transform: uppercase;
 	function myFunction3() {
 		document.getElementById("demo3").innerHTML = "${bean.getD()}";
 	}
-	
-	
-		
-	
-	
 
 	////For timer code
 
-	
-		function CreateTimer(TimerID, Time) {
-			Timer = document.getElementById(TimerID);
-			TotalSeconds = Time;
-	
-			UpdateTimer()
-			window.setTimeout("Tick()", 1000);
+	function CreateTimer(TimerID, Time) {
+		Timer = document.getElementById(TimerID);
+		TotalSeconds = Time;
+
+		UpdateTimer()
+		window.setTimeout("Tick()", 1000);
+	}
+
+	function Tick() {
+		TotalSeconds -= 1;
+		UpdateTimer()
+		window.setTimeout("Tick()", 1000);
+	}
+
+	function UpdateTimer() {
+		Timer.innerHTML = TotalSeconds;
+	}
+
+	function Tick() {
+		if (TotalSeconds <= 0) {
+			//alert("Time's up!")
+			window.location.href = "times-up.jsp";
+			return;
 		}
-	
-		function Tick() {
-			TotalSeconds -= 1;
-			UpdateTimer()
-			window.setTimeout("Tick()", 1000);
-		}
-	
-		function UpdateTimer() {
-			Timer.innerHTML = TotalSeconds;
-		}
-	
-		function Tick() {
-			if (TotalSeconds <= 0) {
-				//alert("Time's up!")
-				window.location.href = "times-up.jsp";
-				return;
-			}
-			
-		
-	
-			TotalSeconds -= 1;
-			UpdateTimer()
-			window.setTimeout("Tick()", 1000);
-		}
-	
-		function UpdateTimer() {
-			var Seconds = TotalSeconds;
-	
-			var Days = Math.floor(Seconds / 86400);
-			Seconds -= Days * 86400;
-	
-			var Hours = Math.floor(Seconds / 3600);
-			Seconds -= Hours * (3600);
-	
-			var Minutes = Math.floor(Seconds / 60);
-			Seconds -= Minutes * (60);
-	
-			var TimeStr = ((Days > 0) ? Days + " days " : "") + LeadingZero(Hours)
-					+ ":" + LeadingZero(Minutes) + ":" + LeadingZero(Seconds)
-	
-			Timer.innerHTML = TimeStr;
-		}
-	
-		function LeadingZero(Time) {
-	
-			return (Time < 10) ? "0" + Time : +Time;
-	
-		}
-		//for quitting the game
-		 function quitGame ( )
-		{
-	    document.getElementById("button1").value = "End Game";
-		    clearTimeout (Time);
-		 
-		}
-	
+
+		TotalSeconds -= 1;
+		UpdateTimer()
+		window.setTimeout("Tick()", 1000);
+	}
+
+	function UpdateTimer() {
+		var Seconds = TotalSeconds;
+
+		var Days = Math.floor(Seconds / 86400);
+		Seconds -= Days * 86400;
+
+		var Hours = Math.floor(Seconds / 3600);
+		Seconds -= Hours * (3600);
+
+		var Minutes = Math.floor(Seconds / 60);
+		Seconds -= Minutes * (60);
+
+		var TimeStr = ((Days > 0) ? Days + " days " : "") + LeadingZero(Hours)
+				+ ":" + LeadingZero(Minutes) + ":" + LeadingZero(Seconds)
+
+		Timer.innerHTML = TimeStr;
+	}
+
+	function LeadingZero(Time) {
+
+		return (Time < 10) ? "0" + Time : +Time;
+
+	}
+	//for quitting the game
+	function quitGame() {
+		document.getElementById("button1").value = "End Game";
+		clearTimeout(Time);
+
+	}
 </script>
 </head>
 <body>
-<br>
+	<br>
 	<div class="jumbotron1">
-		<a>Time Limit:</a>
-		<br>
+		<a>Time Limit:</a> <br>
 		<div id="timer">
 			<a><script type="text/javascript">
 				window.onload = CreateTimer("timer", 60);
@@ -212,41 +216,53 @@ text-transform: uppercase;
 		</div>
 	</div>
 
-	<a><span class="glyphicon glyphicon-thumbs-up"></span> Score : <%out.print(wordsBean.score);%></a>
+	<a><span class="glyphicon glyphicon-thumbs-up"></span> Score : <%
+		out.print(wordsBean.score);
+	%></a>
 	<br>
 	<br>
 	<div class="container">
 		<div class="row">
 			<div class="jumbotron container-fluid">
 				<div class="letters">
-				
-				
-				<!-- <a id="demo">_</a><a id="demo1">_</a><a id="demo2">_</a><a id="demo3">_</a> -->
-				<div class="dummy">
-				<form  action="checking.html" method="get" id="uppercase" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">	
-				 <input type="text" size="1" name="button1"  value="${bean.a}" readonly class="one"> 
-				 <input type="text" size="1" name="button2" value="${bean.b}" readonly class="one"> 
-				<input type="text" size="1" name="button3" value="${bean.c}" readonly class="one"> 
-				<input type="text" size="1" name="button4" value="${bean.d}" readonly class="one">
-					<br>
-					<br>
-					<input type="text" class="form-control" name="answer" required="required"/>
-					<br>
-					<input type="submit" value="Submit" onclick ="waitGame()" class="btn btn-primary btn-block" id="form-button" name="submitb"/><br>
-				</form>
-				</div>	
-				 
+
+
+					<!-- <a id="demo">_</a><a id="demo1">_</a><a id="demo2">_</a><a id="demo3">_</a> -->
+					<div class="dummy">
+						<form action="checking.html" method="get" id="uppercase"
+							class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+							<div>
+								<input type="text" size="1" name="button1" value="${bean.a}"
+									readonly class="one"> 
+								<input type="text" size="1"
+									name="button2" value="${bean.b}" readonly class="one"> 
+							</div>
+								<input
+									type="text" size="1" name="button3" value="${bean.c}" readonly
+									class="one">
+								<input type="text" size="1" name="button4"
+									value="${bean.d}" readonly class="one"> <br> <br>
+							<div>
+							</div> 
+							<input autofocus="autofocus" size="4" type="text"
+								class="form-control" name="answer" required="required"
+								id="answer" /> <br> <input type="submit" value="Guess"
+								onclick="waitGame()" class="btn btn-primary btn-block"
+								id="form-button" name="submitb" /><br>
+						</form>
+					</div>
+
 				</div>
-				</div>
-				
-				<form  action="end-game.jsp"
-					class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
-					<input type="submit" value="End Game" onclick ="quitGame()"
-						class="btn btn-primary btn-block" id="form-button" id="end"/><br>
-				</form>
 			</div>
+
+			<form action="end-game.jsp"
+				class="col-sm-offset-3 col-md-6 col-md-offset-4 col-md-4">
+				<input type="submit" value="Abort Mission" onclick="quitGame()"
+					class="btn btn-primary btn-block" id="form-button" id="end" /><br>
+			</form>
 		</div>
-	
+	</div>
+
 
 	<footer></footer>
 

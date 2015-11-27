@@ -63,7 +63,10 @@ display:in-line:block;
 text-align:in-line;
 font-size: 1.8em;
 }
-
+.jumbotron {
+	width: 30em;
+	margin: auto;
+}
 </style>
 </head>
 <body>
@@ -75,11 +78,11 @@ font-size: 1.8em;
 			<div class="row">
 				<div class="jumbotron">
 				<h3>SCORE</h3>
-				<h1><%out.println(wordsBean.score); %></h1>
+				<h1 style="color:red"><%out.println(wordsBean.score); %></h1>
 				<br>
 				<h3>GAME OVER!</h3>
 				<a>Word doesn't exist.</a> 
-				<h3>List of other possible words:</h3>
+				<h4>List of other possible words:</h4>
 				<%
 					String[] listWordsArray = wordsBean.words;
 					for(int i=1; i<listWordsArray.length; i++){

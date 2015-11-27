@@ -65,7 +65,7 @@ footer h3 span {
 					class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 
 					<br>
-					<input type="submit" value="Start Game"
+					<input type="submit" value="Start Mission"
 						class="btn btn-primary btn-block" id="form-button" /><br>
 				</form>
 				<!--not sure tho kung pupunta sa maingame.jsp  -->

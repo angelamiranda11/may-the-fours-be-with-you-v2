@@ -62,7 +62,10 @@ display:in-line:block;
 text-align:in-line;
 font-size: 1.8em;
 }
-
+.jumbotron {
+	width: 30em;
+	margin: auto;
+}
 </style>
 </head>
 <body>

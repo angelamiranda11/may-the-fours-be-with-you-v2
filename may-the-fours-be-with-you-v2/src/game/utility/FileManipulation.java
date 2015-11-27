@@ -128,13 +128,13 @@ public class FileManipulation {
 		for (int i = 0; i < l; i++) {
 			b[i] = n.charAt(i);
 		}
-		char t;
+		char temp;
 		for (int j = 0; j < l - 1; j++) {
 			for (int k = 0; k < l - 1 - j; k++) {
 				if (b[k] > b[k + 1]) {
-					t = b[k];
+					temp = b[k];
 					b[k] = b[k + 1];
-					b[k + 1] = t;
+					b[k + 1] = temp;
 				}
 			}
 		}

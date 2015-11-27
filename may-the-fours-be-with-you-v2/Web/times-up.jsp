@@ -62,7 +62,10 @@ display:in-line:block;
 text-align:in-line;
 font-size: 1.8em;
 }
-
+.jumbotron {
+	width: 30em;
+	margin: auto;
+}
 </style>
 </head>
 <body>
@@ -73,7 +76,7 @@ font-size: 1.8em;
 		<div class="container">
 			<div class="row">
 				<div class="jumbotron">
-				<h3>SCORE</h3>
+				<h3 style="color:red">SCORE</h3>
 				<h1><%out.println(wordsBean.score); %></h1>
 				<br>
 				<h3>Time's Up!</h3>
