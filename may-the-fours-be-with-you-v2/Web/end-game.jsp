@@ -80,7 +80,7 @@ font-size: 1.8em;
 				<h1 style="color:red"><%out.println(wordsBean.score); %></h1>
 				<br>
 				<h3>Game Over</h3>
-				<a>Mission Aborted.></a> 
+				<a>Mission Aborted.</a> 
 				
 				
 		</div>
