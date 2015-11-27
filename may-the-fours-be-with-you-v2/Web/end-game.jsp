@@ -69,14 +69,19 @@ font-size: 1.8em;
 </style>
 </head>
 <body>
-			<br>
-			<br>
+		<%@ page import = "game.before.wordsBean" %>
+		<%! wordsBean bean = new wordsBean(); %>
+		<br>
+		<br>
 		<div class="container">
 			<div class="row">
 				<div class="jumbotron">
+				<h3>SCORE</h3>
+				<h1 style="color:red"><%out.println(wordsBean.score); %></h1>
+				<br>
 				<h3>Game Over</h3>
-				<a>The game has been put to a <i>halt.</i></a> 
-				<!-- Paano toh? -->
+				<a>Mission Aborted.></a> 
+				
 				
 		</div>
 		<form action="index.jsp" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
