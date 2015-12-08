@@ -104,16 +104,6 @@ footer h3 span {
 	font-family: 'Star Jedi Outline';
 	background-color: #CCCCCC;
 	margin: 0.1em;
-
-.one{
-height:80px;
-font-size:45pt;
-text-align:center;
-display:inline;
-text-transform: uppercase;
-font-family: 'Star Jedi Outline';
-background-color:#CCCCCC;
-
 }
 
 .dummy.uppercase {
@@ -219,7 +209,7 @@ background-color:#CCCCCC;
 <body>
 
 	<br>
-
+	
 	<audio autoplay="autoplay" loop="loop" >
 	  <source src="./sounds/star-wars-cantina-song.mp3" type="audio/mpeg">
 	</audio>
@@ -267,6 +257,9 @@ background-color:#CCCCCC;
 								id="answer" maxlength="4"/> <br> <input type="submit" value="Guess"
 								onclick="waitGame()" class="btn btn-primary btn-block"
 								id="form-button" name="submitb" /><br>
+								<audio autoplay="autoplay">
+	  							<source src="./sounds/level up.mp3" type="audio/mpeg">
+	  							</audio>
 						</form>
 					</div>
 

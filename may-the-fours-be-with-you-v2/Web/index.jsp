@@ -69,7 +69,8 @@ footer h3 span {
 
 					<br>
 					<input type="submit" value="Start Mission"
-						class="btn btn-primary btn-block" id="form-button" /><br>
+						class="btn btn-primary btn-block" id="form-button" bgsound="./sounds/with-you.mp3"/><br>
+						
 				</form>
 				<!--not sure tho kung pupunta sa maingame.jsp  -->
 

@@ -63,8 +63,13 @@ text-align:in-line;
 font-size: 1.8em;
 }
 .jumbotron {
-	width: 30em;
+	width: 38em;
 	margin: auto;
+	height: 30em;
+}
+.yoda {
+	text-align: right;
+	margin-top: -10px;
 }
 </style>
 </head>
@@ -72,6 +77,9 @@ font-size: 1.8em;
 		<%@ page import = "game.before.wordsBean" %>
 		<%! wordsBean bean = new wordsBean(); %>
 		<br>
+		<audio autoplay="autoplay">
+	  							<source src="./sounds/win.mp3" type="audio/mpeg">
+	  							</audio>
 		<br>
 		<div class="container">
 			<div class="row">
@@ -79,11 +87,18 @@ font-size: 1.8em;
 				<h3>SCORE</h3>
 				<h1 style="color:red"><%out.println(wordsBean.score); %></h1>
 				<% if (wordsBean.score==0 || wordsBean.score==1) { %>
-				<img src="images/r2d2.png" height=150 width=200 align="right" />
+				
+					<img src="images/r2d2.png" height=150 width=200 align="right" />
 				<% } else if ( wordsBean.score==2 || wordsBean.score==3)  { %> 
-				<img src="images/yoda.png" height=150 width=200 align="right" />
-				<% } else if ( wordsBean.score==4 || wordsBean.score==5)  { %>
-				<img src="images/darth.png" height=150 width=200 align="right" />
+					<img src="images/darth.png" height=200 width=180 align="left" />
+				
+				<% } else if ( wordsBean.score==4 || wordsBean.score>=5)  { %>
+					<div class="yodapic">
+					<img src="images/yoda.png" height=200 width=200 align="right" />
+				</div>
+				<div class ="yoda">
+				<img src="images/yodaaa.PNG" height=100 width=250/>
+				</div>
 				<% }%>
 				<br>
 				<h3>Game Over</h3>
