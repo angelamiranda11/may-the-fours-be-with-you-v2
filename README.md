@@ -1,2 +1,2 @@
 # may-the-fours-be-with-you-v2
-version2 cause i dont know what happened to the first =.=
+A 4-letter word game programmed using Java for our requirement in Discrete Structures. Main topics include HashMaps and Queues. 
